@@ -1,0 +1,349 @@
+{
+	"owner": "1479167",
+	"lastUpdatedBy": "1479167",
+	"lastRevision": 2206777417,
+	"team": null,
+	"id": "8615128b-27c7-c210-2f5b-45f5f384dd70",
+	"name": "Microsoft Fan API",
+	"description": "",
+	"folders_order": [],
+	"order": [
+		"404c1414-c004-e5b1-38a2-831dc2c390ee",
+		"680ad82c-3119-e6c3-f1d7-88f1fe28836a",
+		"2ed3af24-12b0-371c-c409-d879843c9764",
+		"803661d3-fed5-0281-df12-3ac27e1fbf4f",
+		"d1c53ec0-3ba4-46bb-68a0-3ef28d393fed",
+		"33b1d286-11ba-edd1-b849-e82d306118ce",
+		"47a7fe6b-e3b8-a7e3-7dd2-68eb137bb516",
+		"19a944f8-f3bc-1ed6-e051-96ef101f71ae",
+		"b5935f33-9ba2-13c6-15c0-b865a22bf820"
+	],
+	"folders": [],
+	"hasRequests": true,
+	"requests": [
+		{
+			"folder": null,
+			"id": "19a944f8-f3bc-1ed6-e051-96ef101f71ae",
+			"name": "ADMIN - Get Fan",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "adminUsername",
+					"value": "usertestplatformadmin@fdtestaadadmins.onmicrosoft.com",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "adminPassword",
+					"value": "Test12345",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "clientId",
+					"value": "c6464d2e-63d6-448b-a81d-6d33ae1b1666",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "adminTenantId",
+					"value": "fdtestaadadmins.onmicrosoft.com",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "loginUri",
+					"value": "https://login.windows.net",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "adminAADClientResourceUri",
+					"value": "https://fdtestaadfans.onmicrosoft.com/webapi",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "Authorization: Basic dXNlcnRlc3RwbGF0Zm9ybWFkbWluQGZkdGVzdGFhZGFkbWlucy5vbm1pY3Jvc29mdC5jb206VGVzdDEyMzQ1\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "https://fd-test-euwe-web-api.azurewebsites.net/api/v1/fan/admin/33072238?adminUsername=usertestplatformadmin@fdtestaadadmins.onmicrosoft.com&adminPassword=Test12345&clientId=c6464d2e-63d6-448b-a81d-6d33ae1b1666&adminTenantId=fdtestaadadmins.onmicrosoft.com&loginUri=https://login.windows.net&adminAADClientResourceUri=https://fdtestaadfans.onmicrosoft.com/webapi",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [],
+			"headerData": [],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "8615128b-27c7-c210-2f5b-45f5f384dd70"
+		},
+		{
+			"folder": null,
+			"id": "2ed3af24-12b0-371c-c409-d879843c9764",
+			"name": "Update Fan",
+			"dataMode": "raw",
+			"data": [],
+			"rawModeData": "{\n  \"Email\": \"marco.dipiramo@deltatre.com\",\n  \"FirstName\": \"Marco\",\n  \"LastName\": \"Di Piramo\",\n  \"DisplayName\": \"PiriPiri\",\n  \"Id\": \"1277335535575974971\",\n  \"Properties\": [\n    {\n      \"Value\": \"en\",\n      \"Type\": 3,\n      \"Name\": \"Language\",\n      \"IsEncrypted\": false\n    },\n    {\n      \"Value\": \"ITA\",\n      \"Type\": 3,\n      \"Name\": \"CountryOfResidence\",\n      \"IsEncrypted\": false\n    },\n    {\n      \"Value\": \"2004-09-21\",\n      \"Type\": 2,\n      \"Name\": \"DateOfBirth\",\n      \"IsEncrypted\": false\n    },\n    {\n      \"Value\": \"M\",\n      \"Type\": 3,\n      \"Name\": \"Gender\",\n      \"IsEncrypted\": false\n    },\n    {\n      \"Value\": \"true\",\n      \"Type\": 1,\n      \"Name\": \"Newsletter\",\n      \"IsEncrypted\": false\n    },\n    {\n      \"Value\": \"2017-02-01\",\n      \"Type\": 2,\n      \"Name\": \"NewsletterActivationDate\",\n      \"IsEncrypted\": false\n    },\n    {\n      \"Value\": \"true\",\n      \"Type\": 1,\n      \"Name\": \"StoreNewsletter\",\n      \"IsEncrypted\": false\n    },\n    {\n      \"Value\": \"2017-02-01\",\n      \"Type\": 2,\n      \"Name\": \"StoreNewsletterActivationDate\",\n      \"IsEncrypted\": false\n    },\n    {\n      \"Value\": \"true\",\n      \"Type\": 1,\n      \"Name\": \"TicketingNewsletter\",\n      \"IsEncrypted\": false\n    },\n    {\n      \"Value\": \"2017-02-01\",\n      \"Type\": 2,\n      \"Name\": \"TicketingNewsletterActivationDate\",\n      \"IsEncrypted\": false\n    }\n  ]\n}",
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6ImtleTAifQ.eyJleHAiOjE0ODU5NTc0NjcsIm5iZiI6MTQ4NTk1Mzg2NywidmVyIjoiMS4wIiwiaXNzIjoiaHR0cHM6Ly9sb2dpbi5taWNyb3NvZnRvbmxpbmUuY29tL2MwYzU3ODliLTg1MzctNGRmYS05YjRkLTI4YmRiMjRlMDUwYS92Mi4wLyIsInN1YiI6Ik5vdCBzdXBwb3J0ZWQgY3VycmVudGx5LiBVc2Ugb2lkIGNsYWltLiIsImF1ZCI6IjA4MmMzMTc0LTI0MWMtNGY5YS04ZTMwLTMzOWJhZDQ2MjcxNyIsImFjciI6ImIyY18xYV9maWZhX3NpZ251cG9yc2lnbmluIiwibm9uY2UiOiJkZWZhdWx0Tm9uY2UiLCJpYXQiOjE0ODU5NTM4NjcsImF1dGhfdGltZSI6MTQ4NTk1Mzg2NywiVXNlclByb2ZpbGVJZCI6IjEyNzczMzU1MzU1NzU5NzQ5NzEiLCJvaWQiOiI3ZTcxN2VjMi1lNDhmLTRjN2EtYTE4Zi01MzkzYzhjZjkzZGQifQ.hUzteZJ6fkhmg4lyNzwR4hNSLeD1kiKrReUkuBc-erT5nKv154_tt6TC-LZAh1IbeftRCs4WxCDBRxoi7lWgGybi2hPzHUzGY6v4eIN_Y6OMWgzqmY9eBLlxRvpsQypjeASgN2ilXKe5_EpE6_7R5zXO-1IIJgdElTQH761QcaaxyMAtOth3UXAeulszTqZPMAz2gC3JrARRXbjIBevTXKXwlD2bkyaDSnTPtvYRBx8yIDfAI59Hjbbxj1e48Oa3rzVbUwk4v4uPAJmmqDd3_puRfQWRWnB-wqm2kGVsqdhxa0ozcrikEXbllOH-vP8Kk5VyxzabYyrrPO8FPohatA\nContent-Type: application/json\n",
+			"method": "POST",
+			"pathVariables": {},
+			"url": "https://{{FanAPI_address}}/api/v1/fan/me",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [],
+			"headerData": [],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "8615128b-27c7-c210-2f5b-45f5f384dd70"
+		},
+		{
+			"folder": null,
+			"id": "33b1d286-11ba-edd1-b849-e82d306118ce",
+			"name": "Refresh access token",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "grant_type",
+					"value": "refresh_token",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_id",
+					"value": "{{client_id}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "refresh_token",
+					"value": "eyJraWQiOiJrZXkwIiwidmVyIjoiMS4wIn0.tO0Svyrg8I2XRjKl0O0qEcs87IeaL43EPTc9kdZzNQrllgATJw93xDPWDnjlcywAfOYc1GcIUadSNSH4njYtrpLeNrd3m-xGPKcPWxk1TqFYGCoq5gI8A2qHyPpqV45OTebluYLGX54-vwLqOSzHG3LYy2JUWmNLOPkiJJxePTHeSOck_TCEjOAwWHI4nd0Swkz1HEMEYcyxg-bLDrmFzd7DW2QrxwB87-L9qSJubiNoCDYGpegwRP1nKVoyklJLH4ha_cBdaPdn7UX3pCxDnooJfUBgnxZ-7OKH_eB1RArDSF6r8jv3rIFJHO5S1_nZA24MHd6ulRjlH6SE-Mjm_w.3fRrj1lnrub3Xnke.qAESa1Ayr537hNglGyzSy4orx57BSd35Idpy2lleobbHT7q-Hf4-ya5c931GfS-CZna67tRQ55lw3-JbHWdT5fu6N01wwBFfQ2UvN3hW_kF24l60PGnYtZjj5PIurMcrh3CRdkR3_F6EJ3ses0jmEeQbFbNdKkzVdOjf-kZx9FVwiiFv89WwvJ4kBtblwa2kmf7GVu1-Rem2nBHf-d8PpboYT-CmgP-5HCMWkRByupffeUTbe8_8Hok34BNVB5v9TiXCnbao7CQ55Cx-OkNzm6f5wYQpef2HschuWDIh9hxqPLsgbrVKqFp0c-ZSXYgSOfkgIIi8Ay0YBasw8lcoRWhNic4pRgdMHPmI0OkNDJG_amc5F2yb_6smyABoc6SdSVXc1-1jK-S1WC9pYCeeor_UqGj-qiUVwEAiKVVtaeIFmPGl1AYxUi5M7Kz9VrDxfbAtOhqY8h2SZSg73LYzGnEtdGWF787ZZj0J82gN7IGNhqfc_Aij15yt6i8KquZNu49qU5XZtW3Xa422_slIcSeAlGM6U2FxmTrJYDoMCWutpz4XgxJCbeCWZCPQb034pCxBQNNK4CkCLU41aX4HitoYZOg2_mBZB4LnwlIHfSZcRXOQ7K-wPBuTygNuGr6rjBtmJBHsMCjXvKNiIz9qZsIgejOVINwkJyHGUDXfF88dLhqTRBl3MC8DpjFkVQppP2BCzQT1ekm4tn5eK8kdLxlermPMhkca1oPpvF3JoQQyDyzkVfueoeNIcfCEVf4mffe-XWmi4uUMmStiwZNMrJnfCTEXzKnf5igImjQIlXaJKljCPr64QFD_xnZpQCqbv0wJJhLj3jixEyf2KqYYbfbAOIqVuo7D3Ifn78ZOlV965CS2TabIYMzJwvCWArWkAe1sJIj-48S5LXYfr8EqWNgDHGSb_fI7lhXnzojkiRasZ-GLQa6MAX8u_ROJ1tKPe6NMQY4wDZKm-Hz8-URaWDxTFqYgDwVBMzbpj4vDbWUiEVAnT2ahKpFaoS3_qf_V9hd7jsom0m7v70XaBx1xCyNnBLO-CuduY18ps-kh33F-l_0bKDJYtQjZcXQZnRaCA2fpEHjPEaQ4WKL2bMvDc00_HcIz2NHjhe1fQezRmuVnNcPTWWspHo42d3ExcqxqOAF4QnAAinpQ1FSWLgsRB732aww7e9EFRwWjuW8V0MDG9xayXHohar8gdo_clsHJuqs_8Xsq3QvpISUCxHpRtmmyFH5-q-e36ScBHiCNbvKiikJHfTr2NJt67pXQFRqe4wJsA_luXZNBsEMwZWhPo0HB09mgTidLnTVovn_NyLpkJcYsxd42HqATzTnuuZM11FPd0fXgbyzamQzr3Vd4LLeBwrNUVyU86-fimAGk7yI5te4MAiLuN7UndWUryP0CyoNQvTwKMKbVGQn5Xbm_S4TpnFjxmnOYsG174eEOztnM_RNDT9qxm1xET5_o9yxmXwLIqIbb5RFby0BqJmiDFscvuzrhYek5G0A7mAkQAA_dHJED4cOXMLSi666w8iwPS5USfEfMq8Peeg.Rw_JHzeG2QjlNDDOXhkbXg",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "redirect_uri",
+					"value": "{{redirect_uri}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "scope",
+					"value": "openid offline_access",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_secret",
+					"value": "{{client_secret}}",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"method": "POST",
+			"pathVariables": {},
+			"url": "https://{{B2C_address}}/{{tenant_id}}/oauth2/v2.0/token?p=b2c_1a_fifa_signuporsignin",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [],
+			"headerData": [],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "8615128b-27c7-c210-2f5b-45f5f384dd70"
+		},
+		{
+			"folder": null,
+			"id": "404c1414-c004-e5b1-38a2-831dc2c390ee",
+			"name": "Get Fan",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6ImtleTAifQ.eyJleHAiOjE0ODc5NjU3ODksIm5iZiI6MTQ4Nzk0NDE4OSwidmVyIjoiMS4wIiwiaXNzIjoiaHR0cHM6Ly9hY2NvdW50LmZpZmEuY29tLzVhN2JhZWI3LWU3MDYtNDgzMC1hZDlmLTEwM2ViYTEyNjMxMS92Mi4wLyIsInN1YiI6Ik5vdCBzdXBwb3J0ZWQgY3VycmVudGx5LiBVc2Ugb2lkIGNsYWltLiIsImF1ZCI6IjY0ZTlhZmE4LWM1YzAtNDEzZC04ODJiLWJjOWU2YTgxZTI2NCIsImFjciI6ImIyY18xYV9maWZhX3NpZ251cG9yc2lnbmluIiwibm9uY2UiOiJkZWZhdWx0Tm9uY2UiLCJpYXQiOjE0ODc5NDQxODksImF1dGhfdGltZSI6MTQ4Nzk0NDE4OSwiZ2l2ZW5fbmFtZSI6IkFsYmVydG8iLCJmYW1pbHlfbmFtZSI6Ik1hZ2hpbmkiLCJlbWFpbCI6ImEubWFnaGluaUBnbWFpbC5jb20iLCJpZHAiOiJmYWNlYm9vay5jb20iLCJVc2VyUHJvZmlsZUlkIjoiMzI4NTc3MjEiLCJvaWQiOiJhMDVhNTA5Yy0wNjU4LTQ0NmQtOGU5OC05Yzk1MTdlZTA5ZTgifQ.fZFGrwcZQlV1ukKhLvEFGtF3-INKn6fOf3jZoxzIlJAuvdBzBwWOlS4vgHZ8tHMG2ORNYsxnCYub4Do-5Sl8qI_zPHAZRP5MiAw5ubd42SPqeM3uk_rkqh5OtqOv3uS2Y2xXnOFYqSb4Q_Rsy1BPbdjQJJmawWTS98qcyqrSRNkyr2DMxTGo89u59ufjHWmBS7GraLIYf9isEoa9q7NR0TELeKPFrZuUujScPdG0woDu3f5ArTrri2tHPgkAHXhRW4jfhsqcEF9m4mBV4mLp7Pf9mRKxBrRh3mgsA2ibm3Q9l69PrsGRrAw-0dz6S-qXgycM326QQjRE8PvUZaR-eQ\nContent-Type: application/json\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "https://{{FanAPI_address}}/api/v1/fan/me",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [],
+			"headerData": [],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "8615128b-27c7-c210-2f5b-45f5f384dd70"
+		},
+		{
+			"folder": null,
+			"id": "47a7fe6b-e3b8-a7e3-7dd2-68eb137bb516",
+			"name": "POWER DELETE",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "https://fd-test-euwe-web-identity-api.azurewebsites.net/api/DeleteAADUser?profileID=6136306717799597815",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [],
+			"headerData": [],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "8615128b-27c7-c210-2f5b-45f5f384dd70"
+		},
+		{
+			"folder": null,
+			"id": "680ad82c-3119-e6c3-f1d7-88f1fe28836a",
+			"name": "Get Fan copy",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": null,
+			"description": "",
+			"headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6ImtleTAifQ.eyJleHAiOjE0ODc5NjU3ODksIm5iZiI6MTQ4Nzk0NDE4OSwidmVyIjoiMS4wIiwiaXNzIjoiaHR0cHM6Ly9hY2NvdW50LmZpZmEuY29tLzVhN2JhZWI3LWU3MDYtNDgzMC1hZDlmLTEwM2ViYTEyNjMxMS92Mi4wLyIsInN1YiI6Ik5vdCBzdXBwb3J0ZWQgY3VycmVudGx5LiBVc2Ugb2lkIGNsYWltLiIsImF1ZCI6IjY0ZTlhZmE4LWM1YzAtNDEzZC04ODJiLWJjOWU2YTgxZTI2NCIsImFjciI6ImIyY18xYV9maWZhX3NpZ251cG9yc2lnbmluIiwibm9uY2UiOiJkZWZhdWx0Tm9uY2UiLCJpYXQiOjE0ODc5NDQxODksImF1dGhfdGltZSI6MTQ4Nzk0NDE4OSwiZ2l2ZW5fbmFtZSI6IkFsYmVydG8iLCJmYW1pbHlfbmFtZSI6Ik1hZ2hpbmkiLCJlbWFpbCI6ImEubWFnaGluaUBnbWFpbC5jb20iLCJpZHAiOiJmYWNlYm9vay5jb20iLCJVc2VyUHJvZmlsZUlkIjoiMzI4NTc3MjEiLCJvaWQiOiJhMDVhNTA5Yy0wNjU4LTQ0NmQtOGU5OC05Yzk1MTdlZTA5ZTgifQ.fZFGrwcZQlV1ukKhLvEFGtF3-INKn6fOf3jZoxzIlJAuvdBzBwWOlS4vgHZ8tHMG2ORNYsxnCYub4Do-5Sl8qI_zPHAZRP5MiAw5ubd42SPqeM3uk_rkqh5OtqOv3uS2Y2xXnOFYqSb4Q_Rsy1BPbdjQJJmawWTS98qcyqrSRNkyr2DMxTGo89u59ufjHWmBS7GraLIYf9isEoa9q7NR0TELeKPFrZuUujScPdG0woDu3f5ArTrri2tHPgkAHXhRW4jfhsqcEF9m4mBV4mLp7Pf9mRKxBrRh3mgsA2ibm3Q9l69PrsGRrAw-0dz6S-qXgycM326QQjRE8PvUZaR-eQ\nContent-Type: application/json\n",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "https://{{FanAPI_address}}/api/v1/fan/me",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [],
+			"headerData": [],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "8615128b-27c7-c210-2f5b-45f5f384dd70"
+		},
+		{
+			"folder": null,
+			"id": "803661d3-fed5-0281-df12-3ac27e1fbf4f",
+			"name": "Request access token",
+			"dataMode": "urlencoded",
+			"data": [
+				{
+					"key": "grant_type",
+					"value": "authorization_code",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_id",
+					"value": "{{client_id}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "code",
+					"value": "eyJraWQiOiJrZXkwIiwidmVyIjoiMS4wIn0.NnsEVwB-vPgydlGTJrgykcM52aVSEAkAmCKdB4NjVT8xUVOcDDuyz09K8x1rXHJuK23sielJ5-rkHCIMfjhooBi0HXYMZGNweRLzoA4h0_sbRP-HcxGuArnznmT05lF0voVPRjWECU--jvFfhGpWruzZRhgS9EwGKpzlZx4ArKEgiE2y9YZ4m2zKwiWhYW8lwVeeMCCY3VL0dxXsQYBxI8_SoxPA5xT8Av5YjvoG6k12O8_17YE6uD1a0ckdJQfe5aSJc1kgF-0coidJtBUcYZ82-NJDV8WEe658OznGP6DuA98wSVCcEHEY71b4HG9L0oswfZtCkQ4y5vuTv-dxCw.zQ2x9GMcu6B0EBr4.uScgP0LxNzB7Uv2DmNYuJ-2CqJ3m5coEsUp-AEvbwcwbw_ZnJhqse0h9wi073-w37mnvyzpxnXOTdTWlCXAgD1WP_mx1JV_g3cNtI5gjKqCu75nNwCFU6eb0ZeVfWwKlr9iyRqkqXNrgYQkeexk-1Z-h6osXBKe-uhF3KhLHrH2A2mjIF1nzcfe8AzQ8hX6okHBIRE6_J_sXSLG-e_9_pEn2ONSMHpZHw5uZ3UyhG8ugh_-s0edBhb_DbvMSS6jR398UhM3CGVr5B--JWyxEAgYyYr1rsvhyE7i-CRERBHqojZUgC5FdCsf0t2D86JrU75oHnmrmdQH9t2QIMf49Rf0JFAk-hc299UEViWVlVtBPk0XY624dQ6zcQBYEDmyLPcK-89HezAq-pS7LWc4wUdLvIF0_ERPl5nk17zWFFa7ifee5kGJX09H15FUrdP8Y5y5vsbVkb9mxFIarJZEI2VtbHsUR1Q8t8TgZQE5lNwuUDvv0KllNh0i26y7EtDpZtZe-J2xO6cbH6stB_ugJefZquxHTytRcAQ5ckETyL7GdJSU9JzHzx5EbVmHC-A25qt_1xm7JwY406uOKJiVTsERzsJgkWKUjQvPzA5ma5srTpDC_Abb_mMkayrATi2u9WamNvmNDfA8CYCLYV7Lj6ZiCWhm5WUu4V5KvZ0EL52z4sZzoJPdcSAzGhYvr9C_RlGdlGwU-LHRjyP2UsEQoa5V-wPW_K4nTyraddqIJE4p_or_08v0IeQbAnjnENllQEcGPzRg6Dl6PAlUfGICDNZYlHV0mkd1LpFYwDQsrNpve-I9EAMdozxSCc8XsID62uspLMZVzlVUo170QMZlSbW4LyXyGP_nTyFYEiodnwI2DvXqtk96JHM9tor9FjWER_vFyigNde1ed0L3YTPBPVZ--_EEJAXCJdXk1i3CbG-a0Au85Dak3IyrXCkbnIKCFlh7figXTJQQSS9u2TqfKq_jIu_ch0aoUEk6aj9u7zIGxAsTe9lmfBNevqxjd2Fbcpz977hWIuWMtKVc0LPekQNQGdWMJZnfKlpNvNskiwEdrB-E9S2H8UDgifKdeNIh6FvMLXh4Gzk6kIx_TrAZfhvVoyhQmuouOJ--Uf2D_jcbtiP9ZMWoBTOxfnIiAYK5gpGTz1EupuPVbNsnPR4vYjobYN8_xdFJHfTVxQsL6wEX2dYiwwfkNpwl-_oFePaBY20ikK3qhWa6QbpfGkbjoDhnUFzc3rikGCnL7qKxksYaAbhefknxSBcQ6vJjKcptjiuRaGFEhdBxqmx1lF1CQ2A32ziyxLxEwm_JElsDC0NiCrfHL9a3JCbYD2M01Hm2OrBRj9u--R1795psTTYMpGfLZ.Jfgnqg_YwuA3vABfHG5XXQ",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "redirect_uri",
+					"value": "{{redirect_uri}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "scope",
+					"value": "openid offline_access",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_secret",
+					"value": "{{client_secret}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "",
+					"value": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"method": "POST",
+			"pathVariables": {},
+			"url": "https://{{B2C_address}}/{{tenant_id}}/oauth2/v2.0/token?p=b2c_1a_fifa_signuporsignin",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [],
+			"headerData": [],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "8615128b-27c7-c210-2f5b-45f5f384dd70"
+		},
+		{
+			"folder": null,
+			"id": "b5935f33-9ba2-13c6-15c0-b865a22bf820",
+			"name": "Logout",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "",
+			"method": "GET",
+			"pathVariables": {},
+			"url": "https://account.fifa.com/5a7baeb7-e706-4830-ad9f-103eba126311/oauth2/v2.0/logout?p=b2c_1a_fifa_passwordreset&post_logout_redirect_uri=http%3A%2F%2Fdynamic.fifa.com%2Fpreview%2Findex.html",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [],
+			"headerData": [],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "8615128b-27c7-c210-2f5b-45f5f384dd70"
+		},
+		{
+			"folder": null,
+			"id": "d1c53ec0-3ba4-46bb-68a0-3ef28d393fed",
+			"name": "Delete Fan",
+			"dataMode": "params",
+			"data": null,
+			"rawModeData": null,
+			"descriptionFormat": "html",
+			"description": "",
+			"headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6ImtleTAifQ.eyJleHAiOjE0ODcxNTIyNzcsIm5iZiI6MTQ4NzE0ODY3NywidmVyIjoiMS4wIiwiaXNzIjoiaHR0cHM6Ly9sb2dpbi5taWNyb3NvZnRvbmxpbmUuY29tL2MwYzU3ODliLTg1MzctNGRmYS05YjRkLTI4YmRiMjRlMDUwYS92Mi4wLyIsInN1YiI6Ik5vdCBzdXBwb3J0ZWQgY3VycmVudGx5LiBVc2Ugb2lkIGNsYWltLiIsImF1ZCI6IjA4MmMzMTc0LTI0MWMtNGY5YS04ZTMwLTMzOWJhZDQ2MjcxNyIsImFjciI6ImIyY18xYV9maWZhX3NpZ251cG9yc2lnbmluIiwibm9uY2UiOiJkZWZhdWx0Tm9uY2UiLCJpYXQiOjE0ODcxNDg2NzcsImF1dGhfdGltZSI6MTQ4NzE0ODY3Nywib2lkIjoiYjdhOTMxZDctYzcxYi00OTFiLTlkYmItMmIwNzk3MmI2NmU5IiwiVXNlclByb2ZpbGVJZCI6IjIxMzQ0OTA3MTA1OTM1NDQ5ODEiLCJlbWFpbCI6ImExMEB2cHMzMC5jb20iLCJnaXZlbl9uYW1lIjoiMTExMSIsImZhbWlseV9uYW1lIjoiMTExMSJ9.UqwHeTX8rF53iYTDs0-JUNH8nj518JjtwyFzJ7cYOM6NcgP_1oupKCL0i5RSq4GP_OKoBgcZe5Gon7l1uTbWAwdxHi85mbK3fLRVWByKvhKHzgRHzFFWJWNOGVhe8iJtt9oeR8mhtol-1BdAPKG6SaJ52GAOHKY44ZNEtO4nHo9O3dhiknvtGb9RaYZQUA1hzHlz5lAqBwaQ0lZnC7D2TcZkOA7CfBwuEV5zzwv82x1kI-ox1_ZW5U0wVytaWYpNaMx5ITa4SGNIoeianX1h_AlUhNoFS5rPNqhMolZEPk2BnJArp-aJFzuHkskCLBWCRmRkSfvAG-11F-gPPnsT4w\nContext-Behavior: Synchronous\n",
+			"method": "DELETE",
+			"pathVariables": {},
+			"url": "https://{{FanAPI_address}}/api/v1/fan/me",
+			"preRequestScript": null,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": "{}",
+			"queryParams": [],
+			"headerData": [],
+			"pathVariableData": [],
+			"responses": [],
+			"collectionId": "8615128b-27c7-c210-2f5b-45f5f384dd70"
+		}
+	]
+}
