@@ -24,6 +24,7 @@ namespace Microsoft.Mdp.Identity.Demo.Web
         private static string aadInstance = ConfigurationManager.AppSettings["ida:AadInstance"];
         private static string tenant = ConfigurationManager.AppSettings["ida:Tenant"];
         public static string redirectUri = ConfigurationManager.AppSettings["ida:RedirectUri"];
+        public static string secretId = ConfigurationManager.AppSettings["ida:SecretId"];
 
         // B2C policy identifiers
         public static string SusiPolicyId = ConfigurationManager.AppSettings["ida:SusiPolicyId"];
@@ -41,7 +42,10 @@ namespace Microsoft.Mdp.Identity.Demo.Web
             // Configure OpenID Connect middleware for each policy
             app.UseOpenIdConnectAuthentication(CreateOptionsFromPolicy(PasswordResetPolicyId));
             app.UseOpenIdConnectAuthentication(CreateOptionsFromPolicy(SusiPolicyId));
-            app.UseOAuthBearerTokens();
+            app.UseOAuthBearerTokens(new Owin.Security.OAuth.OAuthAuthorizationServerOptions
+            {
+
+            });
         }
 
         // Used for avoiding yellow-screen-of-death TODO
@@ -99,6 +103,7 @@ namespace Microsoft.Mdp.Identity.Demo.Web
 
                 // These are standard OpenID Connect parameters, with values pulled from web.config
                 ClientId = clientId,
+                ClientSecret = secretId,
                 RedirectUri = redirectUri,
                 PostLogoutRedirectUri = redirectUri,
 
@@ -107,9 +112,14 @@ namespace Microsoft.Mdp.Identity.Demo.Web
                     AuthenticationFailed = AuthenticationFailed,
                     SecurityTokenValidated = OnSecurityTokenValidated,
                     //RedirectToIdentityProvider = OnRedirectToIdentityProvider
+                    RedirectToIdentityProvider = Callback,
+                    SecurityTokenReceived = SecurityCallback,
+                    AuthorizationCodeReceived = AuthorizationCodeCallback,
+                    MessageReceived = MessageCallback
+
                 },
 
-                Scope = "openid", //%20offline_access
+                Scope = "openid offline_access", //%20offline_access
 
                 // FIFA: when the web app also need tokens for calling a web API, use code+id_token.
                 // Otherwise use the default id_token 
@@ -123,6 +133,26 @@ namespace Microsoft.Mdp.Identity.Demo.Web
                     SaveSigninToken = true
                 },
             };
+        }
+
+        private async Task Callback(RedirectToIdentityProviderNotification<OpenIdConnectMessage, OpenIdConnectAuthenticationOptions> config)
+        {
+            var i = config;
+        }
+
+        private async Task SecurityCallback(SecurityTokenReceivedNotification<OpenIdConnectMessage, OpenIdConnectAuthenticationOptions> config)
+        {
+            var i = config;
+        }
+
+        private async Task AuthorizationCodeCallback(AuthorizationCodeReceivedNotification config)
+        {
+            var i = config;
+        }
+
+        private async Task MessageCallback(MessageReceivedNotification<OpenIdConnectMessage, OpenIdConnectAuthenticationOptions> config)
+        {
+            var i = config;
         }
     }
 }

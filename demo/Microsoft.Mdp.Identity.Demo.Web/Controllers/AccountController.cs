@@ -17,7 +17,7 @@ namespace Microsoft.Mdp.Identity.Demo.Web.Controllers
 {
     public class AccountController : Controller
     {
-        public void Login()
+        public ActionResult Login()
         {
             var state = Request.Form["state"];
             var code = Request.Form["code"];
@@ -26,7 +26,7 @@ namespace Microsoft.Mdp.Identity.Demo.Web.Controllers
             {
                 var properties = new AuthenticationProperties
                 {
-                    RedirectUri = "/"                    
+                    RedirectUri = "http://localhost/Home/Index"
                 };
 
                 // The state is what you pass to the AuthenticationProperties.Dictionary during authentication challenge
@@ -36,6 +36,8 @@ namespace Microsoft.Mdp.Identity.Demo.Web.Controllers
                 // You can indicate which policy to use by specifying the policy id as the AuthenticationType
                 HttpContext.GetOwinContext().Authentication.Challenge(properties, Startup.SusiPolicyId);
             }
+
+            return Json(new { status = 1 }, JsonRequestBehavior.AllowGet);
         }
 
         public void UpdateProfile()
