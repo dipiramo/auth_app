@@ -12,6 +12,10 @@ namespace Microsoft.Mdp.Identity.Demo.Web.Controllers
         public ActionResult Index()
         {
             ViewBag.UserProfileId = "To get user profile ID you must login first!";
+            var data = HttpContext.GetOwinContext();
+
+            var state = Request.Form["state"];
+            var code = Request.Form["code"];
 
             if (ClaimsPrincipal.Current != null)
             {

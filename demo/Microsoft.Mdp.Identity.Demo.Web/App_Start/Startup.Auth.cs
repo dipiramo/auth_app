@@ -17,8 +17,8 @@ using System.IdentityModel.Tokens;
 
 namespace Microsoft.Mdp.Identity.Demo.Web
 {
-	public partial class Startup
-	{
+    public partial class Startup
+    {
         // App config settings
         private static string clientId = ConfigurationManager.AppSettings["ida:ClientId"];
         private static string aadInstance = ConfigurationManager.AppSettings["ida:AadInstance"];
@@ -33,12 +33,15 @@ namespace Microsoft.Mdp.Identity.Demo.Web
         {
             app.SetDefaultSignInAsAuthenticationType(CookieAuthenticationDefaults.AuthenticationType);
 
-            app.UseCookieAuthentication(new CookieAuthenticationOptions());
+            app.UseCookieAuthentication(new CookieAuthenticationOptions
+            {
+                CookieDomain = "localhost"
+            });
 
             // Configure OpenID Connect middleware for each policy
             app.UseOpenIdConnectAuthentication(CreateOptionsFromPolicy(PasswordResetPolicyId));
             app.UseOpenIdConnectAuthentication(CreateOptionsFromPolicy(SusiPolicyId));
-
+            app.UseOAuthBearerTokens();
         }
 
         // Used for avoiding yellow-screen-of-death TODO
@@ -69,7 +72,7 @@ namespace Microsoft.Mdp.Identity.Demo.Web
             // If you wanted to keep some local state in the app (like a db of signed up users),
             // you could use this notification to create the user record if it does not already
             // exist.
-            
+
             return Task.FromResult(0);
         }
 
@@ -88,7 +91,7 @@ namespace Microsoft.Mdp.Identity.Demo.Web
         {
             return new OpenIdConnectAuthenticationOptions
             {
-                
+
                 // For each policy, give OWIN the policy-specific metadata address, and
                 // set the authentication type to the id of the policy
                 MetadataAddress = String.Format(aadInstance, tenant, policy),
@@ -98,7 +101,7 @@ namespace Microsoft.Mdp.Identity.Demo.Web
                 ClientId = clientId,
                 RedirectUri = redirectUri,
                 PostLogoutRedirectUri = redirectUri,
-              
+
                 Notifications = new OpenIdConnectAuthenticationNotifications
                 {
                     AuthenticationFailed = AuthenticationFailed,

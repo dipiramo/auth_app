@@ -19,9 +19,15 @@ namespace Microsoft.Mdp.Identity.Demo.Web.Controllers
     {
         public void Login()
         {
+            var state = Request.Form["state"];
+            var code = Request.Form["code"];
+
             if (!Request.IsAuthenticated)
             {
-                var properties = new AuthenticationProperties { RedirectUri = "/" };
+                var properties = new AuthenticationProperties
+                {
+                    RedirectUri = "/"                    
+                };
 
                 // The state is what you pass to the AuthenticationProperties.Dictionary during authentication challenge
                 //properties.Dictionary["UILanguage"] = "English";
